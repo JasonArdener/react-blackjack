@@ -1,0 +1,32 @@
+html {
+	min-height: 100%;
+}
+
+body {
+	background-color: #013E35;
+	background: radial-gradient(ellipse at 31% 28%,#08967B 0,#013E35 100%);
+	color: #fff;
+	height: 100%;
+}
+
+h1 {
+	font-size: 3em;
+	margin: 0.4em 0;
+	text-shadow: 2px 1px 0 #294223;
+}
+
+h2, .h2 {
+	font-size: 2.2em;
+	margin: 0.4em 0;
+	text-shadow: 2px 1px 0 #294223;
+}
+
+.button {
+	display: inline-block;
+	margin: 0.2rem;
+	padding: 0.5rem 2rem;
+	border: 0;
+	background-color: #7CA7E4;
+	color: #fff;
+	cursor: pointer;
+}

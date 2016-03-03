@@ -1,0 +1,105 @@
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after { 
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+.hidden {
+	display: none;
+}
+
+
+
+.vert-margin {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.vert-margin-sm {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.vert-margin-md {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.vert-margin-lg {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+
+
+
+.is-centered-block {
+    display: block;
+    margin: 0 auto;
+}
+
+.is-centered {
+    text-align: center; 
+}
+
+.is-left {
+    text-align: left;
+}
+
+.is-right {
+    text-align: right;
+}
+
+.is-absolute-centered {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0; 
+}
+
+.is-borderless {
+    border: 0 !important;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotate(-20deg) translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(2deg) translateY(0%); 
+    }
+}
+
+@keyframes fadeInSecondary {
+    from {
+        opacity: 0;
+        transform: rotate(20deg) translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(5deg) translateY(0%); 
+    }
+}

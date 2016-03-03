@@ -1,0 +1,50 @@
+@import
+        'settings/_variables.scss',
+        'tools/_mixins.scss',
+        'tools/_utilities.scss',
+        'generic/_global.scss',
+        'generic/_grid.scss',
+        'generic/_theme.scss',
+        'xsmall/components/_components.scss', 
+        'xsmall/objects/_objects.scss';
+
+@media all and (min-width: $grid-sm-bp) {
+        .show-sm {
+            display: block;
+        }
+
+        .hidden-sm { 
+            display: none !important;
+        }
+}
+
+@media all and (min-width: $grid-md-bp) {
+        .show-md {
+            display: block;
+        }
+
+        .hidden-md {
+            display: none !important;
+        }
+}
+
+@media all and (min-width: $grid-lg-bp) {
+        .show-lg {
+            display: block;
+        }
+
+        .hidden-lg {
+            display: none !important;
+        }
+}
+
+
+@media all and (min-width: $grid-xlg-bp) {
+        .show-xlg {
+            display: block;
+        }
+
+        .hidden-xlg {
+            display: none !important;
+        }     
+}

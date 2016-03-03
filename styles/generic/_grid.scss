@@ -1,0 +1,86 @@
+.row {
+  clear: both; 
+  @extend .clearfix;
+}
+
+  .row-col-pad {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+
+  .row-col-pad-sm {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+  }
+
+
+
+.col {
+    width: 100%;
+    display: block;
+}
+  .col-pad {
+    padding-left: $grid-column-padding;
+    padding-right: $grid-column-padding;
+  }
+
+  .col-pad-sm {
+    padding-left: $grid-column-padding/2;
+    padding-right: $grid-column-padding/2;
+  }
+
+
+@mixin make-column($columns) {
+    float: left;
+    width: percentage($columns / $grid-columns);
+    min-height: 1px;
+}
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {@include make-column($i);}
+}
+
+
+@mixin make-offset($columns) {
+    margin-left: percentage($columns / $grid-columns);
+}
+@for $i from 0 through $grid-columns {
+  .offset-#{$i} {@include make-offset($i);}
+}
+
+
+
+@include breakpoint(small) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}-sm {@include make-column($i);}
+    }
+    @for $i from 0 through $grid-columns {
+      .offset-#{$i}-sm {@include make-offset($i);}
+    }
+}
+
+@include breakpoint(medium) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}-md {@include make-column($i);}
+    }
+    @for $i from 0 through $grid-columns {
+      .offset-#{$i}-md {@include make-offset($i);}
+    }
+}
+
+@include breakpoint(large) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}-lg {@include make-column($i);}
+    }
+    @for $i from 0 through $grid-columns {
+      .offset-#{$i}-lg {@include make-offset($i);}
+    }
+}
+
+@include breakpoint(xlarge) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}-xlg {@include make-column($i);} 
+    }
+    @for $i from 0 through $grid-columns {
+      .offset-#{$i}-xlg {@include make-offset($i);}
+    }
+}

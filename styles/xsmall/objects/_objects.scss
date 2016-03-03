@@ -1,0 +1,106 @@
+.o-card-list {
+	margin: 2rem 0; 
+	padding: 0;
+
+	li {
+		list-style: none;
+		display: inline-block;
+	}
+
+	.is-dealer-card {
+		&:nth-child(2) {
+			display: none;
+		}
+	}
+
+	&.is-round-one {
+		.o-card:nth-child(2) {
+			display: inline-block;
+			background-image: url(../../img/back.svg);
+
+			> span {
+				display: none;
+			}
+		}
+	}
+}
+
+.o-card {
+	position: relative;
+	margin: 0.25em 0.1em;
+	border: 1px solid #000;
+	border-radius: 10px;
+	width: 150px;
+	height: 220px;
+	font-size: 2rem;
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: left;
+	color: #000;
+	animation: fadeIn 0.3s linear;
+	animation-fill-mode: forwards;
+
+	&:nth-child(2n) {
+		animation: fadeInSecondary 0.3s linear;
+		-webkit-animation-fill-mode: forwards;
+	}
+}
+
+	.o-card__top-num {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: .3em 0.5em;
+		width: 100%;
+	}
+
+	.o-card__bottom-num {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		padding: .3em 0.5em;
+		text-align: right;
+	}
+
+	.o-suit-C {
+		background-image: url(../../img/club.svg);
+	}
+
+	.o-suit-D {
+		background-image: url(../../img/diamond.svg);
+	}
+
+	.o-suit-H {
+		background-image: url(../../img/heart.svg);
+	}
+
+	.o-suit-S {
+		background-image: url(../../img/spade.svg);
+	}
+
+	.o-num-K {
+		background-image: url(../../img/king.svg);
+	}
+
+	.o-num-Q {
+		background-image: url(../../img/queen.svg);
+	}
+
+	.o-num-J {
+		background-image: url(../../img/jack.svg);
+	}
+
+
+
+.o-result-panel {
+	font-size: 2rem;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	text-shadow: 2px 1px 0 #294223;
+}
